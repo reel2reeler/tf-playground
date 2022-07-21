@@ -4,7 +4,7 @@ resource "tls_private_key" "generated" {
 
 resource "local_file" "private_key_pem" {
   content  = tls_private_key.generated.private_key_pem
-  filename = "${var.aws_region}-${var.env_name}"
+  filename = "${path.module}/ignore-dir/${var.aws_region}-${var.env_name}"
 }
 
 resource "aws_key_pair" "generated" {
