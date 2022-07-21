@@ -28,5 +28,10 @@ override.tf.json
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
 
+.terraform.lock.hcl
+
+# Other files we do not want to commit (like private keys etc)
+**/ignore-dir/*
+
 # Misc
 .DS_Store
